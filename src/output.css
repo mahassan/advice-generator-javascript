@@ -374,6 +374,10 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-grayish-blue: hsl(217, 19%, 24%);
+    --color-dark-blue: hsl(218, 23%, 16%);
+    --color-light-cyan: hsl(193, 38%, 86%);
+    --color-neon-green: hsl(150, 100%, 66%);
   }
 }
 @layer base {
@@ -521,17 +525,35 @@
   .static {
     position: static;
   }
+  .m-auto {
+    margin: auto;
+  }
   .contents {
     display: contents;
+  }
+  .grid {
+    display: grid;
   }
   .table {
     display: table;
   }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .place-content-center {
+    place-content: center;
+  }
+  .bg-grayish-blue {
+    background-color: var(--color-grayish-blue);
+  }
   .bg-slate-900 {
     background-color: var(--color-slate-900);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -548,6 +570,14 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+body {
+  font-family: "Manrope", serif;
+}
+.heading {
+  color: var(--color-neon-green);
+  font-size: 1rem;
 }
 @keyframes spin {
   to {
