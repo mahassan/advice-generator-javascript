@@ -15,5 +15,9 @@
     font-size:1rem;
   }
   button{
-    background-color: var(--color-neon-green);
+    background: url(../images/icon-dice.svg)no-repeat ;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
   }
