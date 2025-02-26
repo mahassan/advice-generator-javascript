@@ -13,9 +13,9 @@ async function findMeAdvice(){
             const {id, advice} = data.slip;
             heading.innerHTML = `Advice # ${id}`
             p.innerText = advice
-            console.dir(p)
+            p.classList.add("text-white")
     }catch(error){
-        p.innerText = error;
+            p.innerText = error;
     }
 }
 btn.addEventListener("click", function(){
