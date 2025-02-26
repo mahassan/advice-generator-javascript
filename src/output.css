@@ -525,8 +525,17 @@
   .static {
     position: static;
   }
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
   .m-auto {
     margin: auto;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .block {
+    display: block;
   }
   .contents {
     display: contents;
@@ -543,8 +552,22 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .place-content-center {
     place-content: center;
+  }
+  .content-center {
+    align-content: center;
+  }
+  .rounded-t-lg {
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+  }
+  .rounded-b-lg {
+    border-bottom-right-radius: var(--radius-lg);
+    border-bottom-left-radius: var(--radius-lg);
   }
   .bg-grayish-blue {
     background-color: var(--color-grayish-blue);
@@ -555,20 +578,22 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  .text-neon-green {
+    color: var(--color-neon-green);
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .underline {
-    text-decoration-line: underline;
+  .text-white {
+    color: var(--color-white);
   }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .hover\:bg-neon-green {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-neon-green);
+      }
+    }
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
@@ -578,6 +603,13 @@ body {
 .heading {
   color: var(--color-neon-green);
   font-size: 1rem;
+}
+button {
+  background: url(../images/icon-dice.svg)no-repeat;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 @keyframes spin {
   to {
@@ -629,10 +661,6 @@ body {
   syntax: "*";
   inherits: false;
   initial-value: skewY(0);
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-outline-style {
   syntax: "*";
