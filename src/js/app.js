@@ -6,23 +6,16 @@ const btn = document.querySelector('.shuffleBtn')
 document.addEventListener("DOMContentLoaded", function(){
     findMeAdvice();
 })
-function findMeAdvice(){
+async function findMeAdvice(){
     try{
-        fetch('https://api.adviceslip.com/advice')
-        .then(res => {
-            if(!res.ok){
-                throw Error(`The error was ${res.response}`)
-            }else{
-            return res.json()
-            }
-        })
-        .then(({slip})=>{
-            const {id, advice} = slip;
+        const endpoint = await fetch('https://api.adviceslip.com/advice');
+        const data = await endpoint.json()
+            const {id, advice} = data.slip;
             heading.innerHTML = `Advice # ${id}`
             p.innerText = advice
-        })
-    }catch(e){
-        console.log(e)
+            console.dir(p)
+    }catch(error){
+        p.innerText = error;
     }
 }
 btn.addEventListener("click", function(){
