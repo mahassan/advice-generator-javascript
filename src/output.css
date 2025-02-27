@@ -564,17 +564,29 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .flex-row {
     flex-direction: row;
   }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .place-content-center {
     place-content: center;
+  }
+  .content-center {
+    align-content: center;
   }
   .items-center {
     align-items: center;
   }
   .items-start {
     align-items: flex-start;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .rounded-t-lg {
     border-top-left-radius: var(--radius-lg);
@@ -598,6 +610,15 @@
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .align-bottom {
+    vertical-align: bottom;
+  }
+  .align-middle {
+    vertical-align: middle;
   }
   .text-neon-green {
     color: var(--color-neon-green);
