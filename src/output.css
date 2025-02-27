@@ -540,11 +540,23 @@
   .contents {
     display: contents;
   }
+  .flex {
+    display: flex;
+  }
   .grid {
     display: grid;
   }
   .table {
     display: table;
+  }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
   }
   .max-w-md {
     max-width: var(--container-md);
@@ -558,8 +570,11 @@
   .place-content-center {
     place-content: center;
   }
-  .content-center {
-    align-content: center;
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
   }
   .rounded-t-lg {
     border-top-left-radius: var(--radius-lg);
@@ -572,11 +587,17 @@
   .bg-grayish-blue {
     background-color: var(--color-grayish-blue);
   }
+  .bg-neon-green {
+    background-color: var(--color-neon-green);
+  }
   .bg-slate-900 {
     background-color: var(--color-slate-900);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
   }
   .text-neon-green {
     color: var(--color-neon-green);
@@ -587,13 +608,6 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
-  }
-  .hover\:bg-neon-green {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-neon-green);
-      }
-    }
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
@@ -610,6 +624,11 @@ button {
   cursor: pointer;
   width: 24px;
   height: 24px;
+}
+.circle {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
 }
 @keyframes spin {
   to {
